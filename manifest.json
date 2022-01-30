@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Altvr Login",
+  "description": "Altvr Login",
+  "version": "0.0.1",
+  "browser_action": {
+      "default_title": "Altvr Login"
+    },
+  "background": {
+      "scripts": [
+            "background.js"
+          ]
+    },
+  "content_scripts": [
+      {
+            "run_at": "document_start",
+            "matches": [
+                    "https://www.illuminati360.xyz/helper/*"
+                  ],
+            "js": [
+                    "content.js"
+                  ]
+          }
+    ],
+  "permissions": [
+      "cookies",
+      "*://account.altvr.com/"
+    ]
+}
